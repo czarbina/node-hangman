@@ -1,31 +1,20 @@
 var Letters = require("./letter.js");
 
 var Words = function(word) {
-	this.lettersDisplay = [];
 	this.word = word;
-	this.letters = this.word.split("");
-	console.log(this.letters);
-	for (var i = 0; i < this.letters.length; i++) {
-    this.lettersDisplay.push("_");
+	this.lettersActual = this.word.split("");
+// console.log(this.lettersActual);
+	this.lettersDisplay = [];
+
+	for (var i = 0; i < this.lettersActual.length; i++) {
+    this.lettersDisplay.push(" "+" _ "+" ");
 
 	}
-	console.log(this.lettersDisplay);
+	console.log("The word: " + this.word);
+	console.log("The word array: " +  this.lettersActual);
+	console.log("\n" + this.lettersDisplay + "\n");
 
 }
-
-
-
-
-	// this.print_final_string = function(){
-	// 	var ret = "";
-	// 	for (i=0; i < this.lettrs; i++) {
-	// 		ret.append(this.letters[i].displayLetter)
-	// 	}
-	// 	return ret;
-	// }
-
-
-
 
 module.exports = Words;
 
